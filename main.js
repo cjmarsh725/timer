@@ -11,6 +11,7 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
+    show: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -28,6 +29,10 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+  })
+
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
   })
 }
 
