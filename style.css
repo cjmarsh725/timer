@@ -1,0 +1,62 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  -webkit-user-select: none;
+}
+
+.container {
+  height: 100%;
+  background-color: #3c3c3c;
+  color: #cccccc;
+}
+
+.titlebar {
+  -webkit-app-region: drag;
+  color: #cccccc;
+  height: 29px;
+  width: 100%;
+  background-color: #3c3c3c;
+  padding: none;
+  margin: 0px;
+}
+
+.titlebar-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titlebar-btn {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  width: 40px;
+  height: 29px;
+}
+
+#minimize-btn {
+  background-image: url(./images/titlebar/minimize.jpg);
+}
+
+#maximize-btn {
+  background-image: url(./images/titlebar/maximize.jpg);
+}
+
+#close-btn {
+  background-image: url(./images/titlebar/close.jpg);
+}
+
+.restore-btn {
+  background-image: url(./images/titlebar/restore.jpg);
+}
+
+.main-divider {
+  width: 100% - 4px;
+  height: 1px;
+  margin: 0 2px 0 2px;
+  background-color: #666666;
+}
+
+.main-content {
+  padding: 40px;
+}
