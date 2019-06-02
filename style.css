@@ -1,32 +1,75 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'Cutive Mono';
+  src: url('fonts/Cutive_Mono/CutiveMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
 html, body {
   padding: 0px;
   margin: 0px;
-  height: 100%;
   -webkit-user-select: none;
+  height: 100%;
+  background: #3c3c3c;
+  animation: fadein 0.5s;
 }
 
 .container {
   height: 100%;
   background-color: #3c3c3c;
   color: #cccccc;
+  font-family: 'Open Sans';
 }
 
 /* Titlebar Styling */
 
 .titlebar {
-  -webkit-app-region: drag;
   color: #cccccc;
   height: 30px;
   width: 100%;
   background-color: #3c3c3c;
   padding: none;
   margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titlebar-drag {
+  -webkit-app-region: drag;
+  width: 100%;
+  height: 100% - 6px;
+  margin: 6px 0px 0px 6px;
+  display: flex;
+}
+
+.hourglass {
+  height: 24px;
+  width: 30px;
+  background-image: url(./images/titlebar/hourglass-title.png);
+}
+
+.title {
+  font-family: 'Cutive Mono';
+  font-size: 18px;
+  line-height: 1;
+  margin-left: 10px;
 }
 
 .titlebar-btn-container {
-  width: 100%;
+  width: 138px;
   display: flex;
-  justify-content: flex-end;
 }
 
 .titlebar-btn {
