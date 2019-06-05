@@ -2,7 +2,8 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-// Titlebar functionality
+/* Titlebar */
+
 const remote = require('electron').remote; 
 const window = remote.getCurrentWindow();
 
@@ -35,11 +36,14 @@ const formatTime = seconds => {
   return new Date(seconds * 1000).toISOString().substr(14, 5);
 }
 
+
+/* Timer */
+
 document.getElementById("timer").innerHTML = formatTime(0);
 
 let startTime = Math.floor(Date.now() / 1000);
-
 let isOn = true;
+const bell = new Audio("bell.wav");
 
 const startTimer = time => {
   startTime = Math.floor(Date.now() / 1000);
@@ -48,10 +52,10 @@ const startTimer = time => {
     document.getElementById("timer").innerHTML = formatTime(diff);
     if (diff >= time) {
       clearInterval(t);
-      document.getElementById("timer").innerHTML = formatTime(0);
+      bell.play();
       if (isOn) {
         isOn = false;
-        startTime(Number(document.getElementById("time-off").value));
+        startTimer(Number(document.getElementById("time-off").value));
       }
     }
   }, 1000);

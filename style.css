@@ -116,6 +116,8 @@ html, body {
   padding: 40px;
 }
 
+/* Timer Styling */
+
 .timer-container {
   display: flex;
   flex-direction: column;
@@ -125,6 +127,34 @@ html, body {
 #timer {
   font-size: 72px;
 }
+
+/* Timer Progress Styling */
+
+.timer-progress-container {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 8px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.progress-container {
+  height: 2px;
+  background-color: #666666;
+}
+
+#progress-on-container {
+  width: 83.33%;
+  height: 8px;
+  background-color: #cccccc;
+}
+
+#progress-off-container {
+  width: 16.66%;
+}
+
+/* Timer Config Styling */
 
 .timer-config-container {
   display: flex;
