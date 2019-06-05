@@ -1,23 +1,31 @@
 {
-  "name": "electron-quick-start",
+  "name": "pomodoro-timer",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A timer in two stages to facilitate the Pomodoro technique.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Pomodoro",
+    "timer"
   ],
-  "author": "GitHub",
+  "author": "Chris Marsh",
   "license": "CC0-1.0",
+  "build": {
+    "appId": "cjmarsh.pomodoro",
+    "productName": "Pomodoro Timer",
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
   "devDependencies": {
-    "electron": "^5.0.2"
+    "electron": "^5.0.2",
+    "electron-builder": "^20.43.0"
   },
   "dependencies": {}
 }

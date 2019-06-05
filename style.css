@@ -154,6 +154,7 @@ html, body {
 
 #progress-on, #progress-off {
   height: 100%;
+  width: 0;
   background-color: #cccccc;
 }
 

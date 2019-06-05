@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: build
+appId: cjmarsh.pomodoro
+productName: Pomodoro Timer
+win:
+  target: NSIS
+  icon: build/icon.ico
+electronVersion: 5.0.2

@@ -68,9 +68,10 @@ const startTimer = time => {
     if (diff >= time) {
       clearInterval(t);
       bell.play();
+      window.show();
       if (isOn) {
         isOn = false;
-        startTimer(Number(document.getElementById("time-off").value));
+        startTimer(Number(document.getElementById("time-off").value) * 60);
       }
     }
   }, 1000);
@@ -82,5 +83,5 @@ document.getElementById("start-btn").addEventListener("click", e => {
   const timeOff = Number(document.getElementById("time-off").value);
   progOnCont.style.width = timeOn / (timeOn + timeOff) * 100.0 + "%";
   progOffCont.style.width = timeOff / (timeOn + timeOff) * 100.0 + "%";
-  startTimer(timeOn);
+  startTimer(timeOn * 60);
 });
