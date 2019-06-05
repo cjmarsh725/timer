@@ -146,12 +146,15 @@ html, body {
 
 #progress-on-container {
   width: 83.33%;
-  height: 8px;
-  background-color: #cccccc;
 }
 
 #progress-off-container {
   width: 16.66%;
+}
+
+#progress-on, #progress-off {
+  height: 100%;
+  background-color: #cccccc;
 }
 
 /* Timer Config Styling */
