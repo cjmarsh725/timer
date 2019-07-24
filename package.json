@@ -18,7 +18,7 @@
     "appId": "cjmarsh.timer",
     "productName": "Timer",
     "win": {
-      "target": "NSIS",
+      "target": "msi",
       "icon": "build/icon.ico"
     }
   },
