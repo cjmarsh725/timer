@@ -39,8 +39,7 @@ const formatTime = seconds => {
   return new Date(seconds * 1000).toISOString().substr(14, 5);
 }
 
-// document.getElementById("timer").innerHTML = formatTime(0);
-
+let t;
 let startTime = Math.floor(Date.now() / 1000);
 const bell = new Audio("bell.wav");
 const prog = document.getElementById("progress");
@@ -50,7 +49,7 @@ timer.innerHTML = formatTime(0);
 const startTimer = time => {
   startTime = Math.floor(Date.now() / 1000);
   prog.style.width = "0";
-  let t = setInterval(function() {
+  t = setInterval(function() {
     const diff = Math.floor(Date.now() / 1000) - startTime;
     timer.innerHTML = formatTime(diff);
     prog.style.width = (diff / time * 100.0).toString() + "%";
@@ -63,5 +62,7 @@ const startTimer = time => {
 }
 
 document.getElementById("start-btn").addEventListener("click", e => {
+  clearInterval(t);
+  timer.innerHTML = formatTime(0);
   startTimer(Number(document.getElementById("time").value) * 60);
 });
