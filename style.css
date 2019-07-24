@@ -140,19 +140,12 @@ html, body {
 }
 
 .progress-container {
-  height: 2px;
+  height: 8px;
   background-color: #666666;
+  width: 100%;
 }
 
-#progress-on-container {
-  width: 83.33%;
-}
-
-#progress-off-container {
-  width: 16.66%;
-}
-
-#progress-on, #progress-off {
+#progress {
   height: 100%;
   width: 0;
   background-color: #cccccc;

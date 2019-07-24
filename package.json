@@ -1,7 +1,7 @@
 {
-  "name": "pomodoro-timer",
+  "name": "timer",
   "version": "1.0.0",
-  "description": "A timer in two stages to facilitate the Pomodoro technique.",
+  "description": "A simple timer.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -10,14 +10,13 @@
   },
   "repository": "",
   "keywords": [
-    "Pomodoro",
     "timer"
   ],
   "author": "Chris Marsh",
   "license": "CC0-1.0",
   "build": {
-    "appId": "cjmarsh.pomodoro",
-    "productName": "Pomodoro Timer",
+    "appId": "cjmarsh.timer",
+    "productName": "Timer",
     "win": {
       "target": "NSIS",
       "icon": "build/icon.ico"
